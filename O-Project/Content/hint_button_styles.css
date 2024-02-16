@@ -1,0 +1,60 @@
+/* hint_button_styles.css */
+
+/* Boutons d'indice */
+.hint-btn {
+    margin-right: 10px; /* Espace entre le bouton d'indice et le mot */
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #332d74a3;
+    color: rgb(151, 95, 197);
+    border: none;
+    border-radius: 5px;
+}
+
+/* Lorsque l'indice est affiché, vous pourriez vouloir changer l'apparence du bouton */
+.hint-btn.active {
+    background-color: #0056b3;
+}
+/* Style existant */
+/* ... */
+
+/* Pop-up d'indice */
+.hint-popup {
+    position: fixed;
+    z-index: 1000; /* Haute valeur pour s'assurer qu'il est au-dessus des autres éléments */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none; /* Utiliser flexbox pour centrer le contenu */
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    background-color: rgba(0,0,0,0.5); /* Fond sombre semi-transparent */
+}
+
+.hint-popup-content {
+    background-color: #332d74ec;
+    color: rgb(151, 95, 197);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 300px; /* Ajustez selon la taille désirée du pop-up */
+    position: relative; /* Nécessaire pour positionner le bouton de fermeture */
+}
+
+.close-btn {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

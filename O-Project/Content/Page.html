@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Jeu de Mots Cachés</title>
+    <link rel="stylesheet" href="style_sheet.css">
+    <link rel="stylesheet" href="hint_button_styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">Quand je pense à Angelina je pense à...</div>
+        <div class="columns">
+            <div class="column">
+                <div class="word-container">
+                    <button class="hint-btn" data-word="1">Indice</button>
+                    <div id="word1" class="word"><span>Soeur</span><div class="mask"></div></div>
+                </div>
+                <div class="word-container">
+                    <button class="hint-btn" data-word="2">Indice</button>
+                    <div id="word2" class="word"><span>Cuisine</span><div class="mask"></div></div>
+                </div>
+                <div class="word-container">
+                    <button class="hint-btn" data-word="3">Indice</button>
+                    <div id="word3" class="word"><span>Meilleure amie</span><div class="mask"></div></div>
+                </div>
+                <div class="word-container">
+                    <button class="hint-btn" data-word="4">Indice</button>
+                    <div id="word4" class="word"><span>Damso</span><div class="mask"></div></div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="word-container">
+                    <button class="hint-btn" data-word="5">Indice</button>
+                    <div id="word5" class="word"><span>Cochon</span><div class="mask"></div></div>
+                </div>
+                <div class="word-container">
+                    <button class="hint-btn" data-word="6">Indice</button>
+                    <div id="word6" class="word"><span>Princesse</span><div class="mask"></div></div>
+                </div>
+                <div class="word-container">
+                    <button class="hint-btn" data-word="7">Indice</button>
+                    <div id="word7" class="word"><span>Seins</span><div class="mask"></div></div>
+                </div>
+                <div class="word-container">
+                    <button class="hint-btn" data-word="8">Indice</button>
+                    <div id="word8" class="word"><span>Maths</span><div class="mask"></div></div>
+                </div>
+            </div>
+        </div>
+        <form class="input-form" onsubmit="event.preventDefault();">
+            <input type="text" class="input-field" placeholder="Entrez votre réponse ici...">
+            <button type="button" class="submit-button">Soumettre</button>
+        </form>
+    </div>
+
+    <div id="hint-popup" class="hint-popup">
+        <div class="hint-popup-content">
+            <span class="close-btn" onclick="document.getElementById('hint-popup').style.display='none';">&times;</span>
+            <p id="hint-text">L'indice apparaîtra ici</p>
+        </div>
+    </div>    
+    <script src="game.js"></script>
+    <div id="congratulations-popup" class="hint-popup" style="display: none;">
+        <div class="hint-popup-content">
+            <span class="close-btn" onclick="document.getElementById('congratulations-popup').style.display='none';">&times;</span>
+            <p>Félicitations ! Tous les mots ont été trouvés !</p>
+            <a href="https://example.com" target="_blank" class="visit-link">Récupère tes cadeaux!</a>
+        </div>
+    </div>    
+</body>
+</html>
